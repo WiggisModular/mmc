@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name PSU)(type Legacy)(uri ${KIPRJMOD}/PSU.lib)(options "")(descr ""))
-)

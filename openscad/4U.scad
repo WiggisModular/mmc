@@ -42,11 +42,20 @@ oDepth = notchLenght * depthNotches;
 
 
 module mside(){
-    siderails(oDepth,oWidth,oHeight,materialThickness,notchLenght,posDepth,posHeight,holeDiameter,holeDistance);
+    difference(){
+        siderails(oDepth,oWidth,oHeight,materialThickness,notchLenght); 
+        railholes(oDepth - posDepth,posHeight,holeDiameter,holeDistance,materialThickness);
+        translate([oDepth - posDepth,0,169])rotate([90,0,0])cylinder(r=holeDiameter/2, h=2*materialThickness, center=true);
+    }
 }
 
 module mback(){
-    color("green") back(oDepth,oWidth,oHeight,materialThickness,notchLenght);
+    color("green"){
+        difference(){
+            back(oDepth,oWidth,oHeight,materialThickness,notchLenght);
+            translate([0,90,materialThickness+6.6])cube([materialThickness,8.5,7.5]);
+        }
+    }
 }
 
 module mbottom(){
@@ -70,16 +79,14 @@ module exploded(){
 module flat(){
     mbottom();
     translate([-materialThickness, 0, 0]) rotate([0, -90, 0]) mback();
-    translate([-oHeight-oDepth-2*materialThickness, 2*materialThickness, 0]) rotate([ -90, 0, 0]) mside();
-    translate([-oHeight-oDepth-2*materialThickness, 4*materialThickness+oHeight, 0]) rotate([ -90, 0, 0]) mside();
+    translate([-oHeight-oDepth-2*materialThickness, 2*materialThickness, materialThickness]) rotate([ -90, 0, 0]) mside();
+    translate([-oHeight-oDepth-2*materialThickness, 4*materialThickness+oHeight, materialThickness]) rotate([ -90, 0, 0]) mside();
 }
-
-
 
 
 if (mounted == 0){  
     if (rendered == 0) flat();
-    else render() projection() flat();
+    else projection() render() flat();
 } else if (mounted == 1){
     if (rendered == 0) exploded();
     else render() exploded();

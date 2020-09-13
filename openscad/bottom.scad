@@ -6,7 +6,7 @@ module bottom(d,w,h,mt,nl) {
         notches(d,nl,mt);
         translate([mt, 0, 0]) rotate([0, 0, 90])notches(w,nl,mt);
         translate([0,w-mt,0]) notches(d,nl,mt);
-        bottomCableHole(d/2,50,20,2*mt);
+        bottomCableHole(d/2,40,20,2*mt);
     }
 }
 

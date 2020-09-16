@@ -7,11 +7,13 @@ use <utils.scad>
 // lenght of the used rails 
 width = 433;
 // in mm (inside, will be a bit higher due to stacking)
-height = 135;
+height = 185;
 // in mm
 materialThickness = 5;
-// sets how many notches (calculated from width) the depth will be (must be odd)
-depthNotches = 13; 
+// in mm
+depth = 160; 
+// in mm
+notchLenght = 15;
 
 /* [Mounting holes for the rails] */
 // Hole distance
@@ -25,20 +27,17 @@ posDepth = 25;
 
 
 /* [Render Options] */
-mounted = 0; //[0:flat, 1:exploded, 2:mounted]
+mounted = 1; //[0:flat, 1:exploded, 2:mounted]
 rendered = 0; //[0:false, 1:true]
-
-/* [Other paraneters] */
-// sets how man notches in are used for the width (must be odd)
-widthNotches = 35;
 $fn = 150;
+
+
+
 
 // calculated values
 oWidth = width + 2 * materialThickness;
-notchLenght = oWidth / widthNotches;
-
-oHeight = height +  2 * materialThickness + notchLenght;
-oDepth = notchLenght * depthNotches;
+oHeight = height +  2 * materialThickness;
+oDepth = depth +  2 * materialThickness;
 
 
 module mside(){

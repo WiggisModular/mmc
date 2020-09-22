@@ -44,7 +44,7 @@ module mside(){
     difference(){
         siderails(oDepth,oWidth,oHeight,materialThickness,notchLenght); 
         railholes(oDepth - posDepth,posHeight,holeDiameter,holeDistance,materialThickness);
-        translate([oDepth - posDepth,0,169])rotate([90,0,0])cylinder(r=holeDiameter/2, h=2*materialThickness, center=true);
+        translate([oDepth - posDepth,0,178])rotate([90,0,0])cylinder(r=holeDiameter/2, h=2*materialThickness, center=true);
     }
 }
 
@@ -77,9 +77,9 @@ module exploded(){
 
 module flat(){
     mbottom();
-    translate([-materialThickness, 0, 0]) rotate([0, -90, 0]) mback();
-    translate([-oHeight-oDepth-2*materialThickness, 2*materialThickness, materialThickness]) rotate([ -90, 0, 0]) mside();
-    translate([-oHeight-oDepth-2*materialThickness, 4*materialThickness+oHeight, materialThickness]) rotate([ -90, 0, 0]) mside();
+    translate([oHeight+oDepth+materialThickness, 0, 0]) rotate([0, -90, 0]) mback();
+    translate([oHeight+oDepth+2*materialThickness, 2*materialThickness, materialThickness]) rotate([ -90, 0, 0]) mside();
+    translate([oHeight+oDepth+2*materialThickness, 4*materialThickness+oHeight, materialThickness]) rotate([ -90, 0, 0]) mside();
 }
 
 

@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "1A Eurorack PSU"
-Date "2020-09-13"
-Rev "00"
+Date "2020-10-05"
+Rev "01"
 Comp "Wiggis Modular"
 Comment1 ""
 Comment2 ""
@@ -1215,4 +1215,6 @@ Wire Wire Line
 Connection ~ 4900 1950
 Wire Wire Line
 	4900 1950 4900 2000
+Text Notes 5100 2450 0    50   ~ 0
+DKMW30F-15\n(Different pinout, completly bollocks \npin numbering but compatible on the \nsecondary side, primary is done with vias.  
 $EndSCHEMATC

@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:psu-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -63,12 +64,12 @@ Connection ~ 1850 2250
 $Comp
 L PSU:PYBE30 U1
 U 1 1 5F5B1323
-P 4600 2450
-F 0 "U1" H 4650 2500 50  0000 C CNN
-F 1 "PYBE30-Q24-D15" H 4950 1900 50  0000 C CNN
-F 2 "psu:PYBE30" H 4600 2450 50  0001 C CNN
-F 3 "" H 4600 2450 50  0001 C CNN
-	1    4600 2450
+P 5100 1450
+F 0 "U1" H 5150 1500 50  0000 C CNN
+F 1 "PYBE30-Q24-D15" H 5450 900 50  0000 C CNN
+F 2 "psu:PYBE30" H 5100 1450 50  0001 C CNN
+F 3 "" H 5100 1450 50  0001 C CNN
+	1    5100 1450
 	1    0    0    -1  
 $EndComp
 Connection ~ 1950 2800
@@ -77,18 +78,18 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0102
 U 1 1 5F5B2AFF
-P 4400 3000
-F 0 "#PWR0102" H 4400 2750 50  0001 C CNN
-F 1 "GND" H 4405 2827 50  0000 C CNN
-F 2 "" H 4400 3000 50  0001 C CNN
-F 3 "" H 4400 3000 50  0001 C CNN
-	1    4400 3000
+P 4900 2000
+F 0 "#PWR0102" H 4900 1750 50  0001 C CNN
+F 1 "GND" H 4905 1827 50  0000 C CNN
+F 2 "" H 4900 2000 50  0001 C CNN
+F 3 "" H 4900 2000 50  0001 C CNN
+	1    4900 2000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4500 2850 4400 2850
+	5000 1850 4900 1850
 Wire Wire Line
-	4400 2850 4400 3000
+	4900 1850 4900 1950
 Wire Wire Line
 	7850 2400 8000 2400
 Wire Wire Line
@@ -162,13 +163,13 @@ Wire Wire Line
 $Comp
 L Diode:1N4001 D1
 U 1 1 5F5C0503
-P 4250 2550
-F 0 "D1" H 4250 2333 50  0000 C CNN
-F 1 "1N5406RLG" H 4250 2424 50  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 4250 2375 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 4250 2550 50  0001 C CNN
-	1    4250 2550
-	-1   0    0    1   
+P 4750 1750
+F 0 "D1" H 4750 1533 50  0000 C CNN
+F 1 "1N5406RLG" H 4900 1600 50  0000 C CNN
+F 2 "Diode_THT:D_DO-201AD_P15.24mm_Horizontal" H 4750 1575 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 4750 1750 50  0001 C CNN
+	1    4750 1750
+	0    1    1    0   
 $EndComp
 Connection ~ 9050 1400
 $Comp
@@ -1054,10 +1055,8 @@ F 3 "~" H 1400 1550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 1950 1650
-Text GLabel 3950 2550 0    50   Input ~ 0
+Text GLabel 4450 1550 0    50   Input ~ 0
 VIN
-Wire Wire Line
-	4400 2550 4500 2550
 Text GLabel 3350 1550 2    50   Input ~ 0
 VIN
 Text GLabel 7850 1900 0    50   Input ~ 0
@@ -1068,169 +1067,26 @@ Text GLabel 7850 1400 0    50   Input ~ 0
 +15V
 Wire Wire Line
 	7850 1400 8000 1400
-Text GLabel 5550 2550 2    50   Input ~ 0
+Text GLabel 6050 1550 2    50   Input ~ 0
 +15V
 Wire Wire Line
-	5400 2550 5550 2550
+	5900 1550 6050 1550
 Wire Wire Line
-	5400 2700 5550 2700
+	5900 1700 6050 1700
 Wire Wire Line
-	5400 2850 5550 2850
-Text GLabel 5550 2850 2    50   Input ~ 0
+	5900 1850 6050 1850
+Text GLabel 6050 1850 2    50   Input ~ 0
 -15V
-Text GLabel 5550 2700 2    50   Input ~ 0
+Text GLabel 6050 1700 2    50   Input ~ 0
 0V
-$Comp
-L Regulator_Linear:LM7815_TO220 U5
-U 1 1 5F88E4C6
-P 5200 1400
-F 0 "U5" H 5200 1642 50  0000 C CNN
-F 1 "VR20S12" H 5200 1551 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5200 1625 50  0001 C CIN
-F 3 "http://www.fairchildsemi.com/ds/LM/LM7805.pdf" H 5200 1350 50  0001 C CNN
-	1    5200 1400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:CP C7
-U 1 1 5F8C77B7
-P 4650 1650
-F 0 "C7" H 4768 1696 50  0000 L CNN
-F 1 "22u/50V" H 4768 1605 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 4688 1500 50  0001 C CNN
-F 3 "~" H 4650 1650 50  0001 C CNN
-	1    4650 1650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:CP C8
-U 1 1 5F8C7F03
-P 5650 1650
-F 0 "C8" H 5768 1696 50  0000 L CNN
-F 1 "22u/50V" H 5768 1605 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 5688 1500 50  0001 C CNN
-F 3 "~" H 5650 1650 50  0001 C CNN
-	1    5650 1650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4650 1500 4650 1400
-Wire Wire Line
-	4650 1400 4900 1400
-Wire Wire Line
-	5500 1400 5650 1400
-Wire Wire Line
-	5650 1400 5650 1500
-Wire Wire Line
-	5200 1700 5200 1900
-Wire Wire Line
-	5200 1900 4650 1900
-Wire Wire Line
-	4650 1900 4650 1800
-Wire Wire Line
-	5650 1800 5650 1900
-Wire Wire Line
-	5650 1900 5200 1900
-Connection ~ 5200 1900
-Text GLabel 3950 1400 0    50   Input ~ 0
-VIN
-Connection ~ 5650 1400
-$Comp
-L Device:R R3
-U 1 1 5F9A222F
-P 5950 1900
-F 0 "R3" V 6050 1900 50  0000 C CNN
-F 1 "0R" V 5950 1900 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5880 1900 50  0001 C CNN
-F 3 "~" H 5950 1900 50  0001 C CNN
-	1    5950 1900
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	5650 1900 5800 1900
-Connection ~ 5650 1900
-Text GLabel 6750 1400 2    50   Input ~ 0
-+15V
-Wire Wire Line
-	6600 1400 6750 1400
-$Comp
-L Device:R R2
-U 1 1 5F9F2240
-P 4400 1400
-F 0 "R2" V 4500 1400 50  0000 C CNN
-F 1 "0R" V 4400 1400 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4330 1400 50  0001 C CNN
-F 3 "~" H 4400 1400 50  0001 C CNN
-	1    4400 1400
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	4550 1400 4650 1400
-Connection ~ 4650 1400
-Wire Wire Line
-	3950 1400 4250 1400
 Wire Wire Line
 	8600 1900 9050 1900
-Wire Wire Line
-	3950 2550 4100 2550
-$Comp
-L Diode:1N4001 D2
-U 1 1 5FB340FB
-P 6450 1400
-F 0 "D2" H 6450 1183 50  0000 C CNN
-F 1 "1N5406RLG" H 6450 1274 50  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 6450 1225 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 6450 1400 50  0001 C CNN
-	1    6450 1400
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	8000 2000 8000 1900
 Wire Wire Line
 	8600 1900 8600 2100
 Wire Wire Line
 	9050 2000 9050 1900
-Text GLabel 6750 1750 2    50   Input ~ 0
--15V
-Wire Wire Line
-	6600 1750 6750 1750
-$Comp
-L Diode:1N4001 D3
-U 1 1 5FBD9420
-P 6450 1750
-F 0 "D3" H 6450 1967 50  0000 C CNN
-F 1 "1N5406RLG" H 6450 1876 50  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 6450 1575 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 6450 1750 50  0001 C CNN
-	1    6450 1750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5650 1400 6200 1400
-Wire Wire Line
-	6300 1750 6200 1750
-Wire Wire Line
-	6200 1750 6200 1400
-Connection ~ 6200 1400
-Wire Wire Line
-	6200 1400 6300 1400
-$Comp
-L power:GND #PWR0103
-U 1 1 5FC2DC23
-P 5200 2000
-F 0 "#PWR0103" H 5200 1750 50  0001 C CNN
-F 1 "GND" H 5205 1827 50  0000 C CNN
-F 2 "" H 5200 2000 50  0001 C CNN
-F 3 "" H 5200 2000 50  0001 C CNN
-	1    5200 2000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5200 2000 5200 1900
-Wire Wire Line
-	6750 1900 6100 1900
-Text GLabel 6750 1900 2    50   Input ~ 0
-0V
 Connection ~ 8000 1400
 Wire Wire Line
 	8000 1400 8300 1400
@@ -1292,20 +1148,6 @@ F 3 "~" H 2150 7250 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3150 1650 3350 1650
-Wire Notes Line
-	3650 2250 7200 2250
-Wire Notes Line
-	7200 1050 3650 1050
-Wire Notes Line
-	3650 3450 7200 3450
-Wire Notes Line
-	7200 1050 7200 3450
-Wire Notes Line
-	3650 1050 3650 3450
-Text Notes 3700 2200 0    50   ~ 0
-Option 1
-Text Notes 3700 3400 0    50   ~ 0
-Option 2
 $Comp
 L Device:R R4
 U 1 1 5F7EC9D3
@@ -1359,4 +1201,18 @@ Text GLabel 3350 2000 2    50   Input ~ 0
 -12V
 Text Notes 2300 2450 0    50   ~ 0
 1/2 Switch\n3 GND\n4 +5V\n5 -12V\n6 +12V
+Wire Wire Line
+	4450 1550 4750 1550
+Wire Wire Line
+	4750 1600 4750 1550
+Connection ~ 4750 1550
+Wire Wire Line
+	4750 1550 5000 1550
+Wire Wire Line
+	4750 1900 4750 1950
+Wire Wire Line
+	4750 1950 4900 1950
+Connection ~ 4900 1950
+Wire Wire Line
+	4900 1950 4900 2000
 $EndSCHEMATC

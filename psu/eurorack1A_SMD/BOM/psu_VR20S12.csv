@@ -1,0 +1,14 @@
+Reference, Quantity, Value, Footprint, Datasheet, Manufacturer, Manufacturer Part Number, Mouser, DigiKey
+C1 C2 C4 C3 C5 C6 ,6,"330n","Capacitor_THT:CP_Radial_D6.3mm_P2.50mm","~",Wurth Elektronik,860020672003,710-860020672003,732-8849-1-ND 
+C7 C8 ,2,"22u/50V","Capacitor_THT:CP_Radial_D6.3mm_P2.50mm","~",Wurth Elektronik,860020672011,710-860020672011,732-8857-1-ND 
+D2 D3 ,2,"1N5406RLG","Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal","~",ON Semiconductor,1N5406RLG,863-1N5406RLG,1N5406RLGOSCT-ND
+J2 J3 J1 ,3,"Conn_01x02_Male","Connector_Phoenix_MC:PhoenixContact_MC_1,5_2-G-3.5_1x02_P3.50mm_Horizontal","~",Phoenix,1844210,651-1844210,277-2416-ND
+J2a J3a J1a,3,,,"~",Phoenix,1840366,651-1840366,277-2417-ND
+J4 J5 J6 J7 J8 J9 J10 J11 J12 J13 ,10,"Conn_02x08_Odd_Even","Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical","~",On Shore Technology Inc., 302-S161,,ED10523-ND
+R1 ,1,"R","Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal","~"
+R3 R2 ,2,"0R","Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal","~"
+SW1 ,1,"SW_MEC_5G_LED","Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical","http://www.apem.com/int/index.php?controller=attachment&id_attachment=488"
+U2 ,1,"LM7812_TO220","Package_TO_SOT_THT:TO-220-3_Vertical","http://www.fairchildsemi.com/ds/LM/LM7805.pdf",STMicroelectronics,L7812CV,511-L7812CV,497-1452-5-ND
+U3 ,1,"LM7912_TO220","Package_TO_SOT_THT:TO-220-3_Vertical","http://www.fairchildsemi.com/ds/LM/LM7905.pdf",STMicroelectronics,L7912CV,511-L7912CV,497-1476-5-ND
+U4 ,1,"LM7805_TO220","Package_TO_SOT_THT:TO-220-3_Vertical","http://www.fairchildsemi.com/ds/LM/LM7805.pdf",STMicroelectronics,L7805CV,511-L7805CV,497-1443-5-ND 
+U5 ,1,"VR20S12","Package_TO_SOT_THT:TO-220-3_Vertical","http://www.fairchildsemi.com/ds/LM/LM7805.pdf",XP Power,VR20S12,209-VR20S12,1470-VR20S12-ND

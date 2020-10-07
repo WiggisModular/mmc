@@ -29,8 +29,6 @@ Wire Wire Line
 	1600 1650 1950 1650
 Wire Wire Line
 	1600 1550 1850 1550
-Wire Wire Line
-	2250 1650 1950 1650
 $Comp
 L Device:R R1
 U 1 1 5F568609
@@ -274,11 +272,6 @@ Text GLabel 1500 4500 0    50   Input ~ 0
 -12V
 Wire Wire Line
 	1600 4500 1500 4500
-Connection ~ 10450 1900
-Wire Wire Line
-	10450 1900 10700 1900
-Text GLabel 10700 1900 2    50   Input ~ 0
-0V
 Text GLabel 2300 4400 2    50   Input ~ 0
 0V
 Wire Wire Line
@@ -1054,7 +1047,6 @@ F 3 "~" H 1400 1550 50  0001 C CNN
 	1    1400 1550
 	1    0    0    -1  
 $EndComp
-Connection ~ 1950 1650
 Text GLabel 4450 1550 0    50   Input ~ 0
 VIN
 Text GLabel 3350 1550 2    50   Input ~ 0
@@ -1217,4 +1209,8 @@ Wire Wire Line
 	4900 1950 4900 2000
 Text Notes 5100 2450 0    50   ~ 0
 DKMW30F-15\n(Different pinout, completly bollocks \npin numbering but compatible on the \nsecondary side, primary is done with vias.  
+Text GLabel 2150 1650 0    50   Input ~ 0
+0V
+Wire Wire Line
+	2250 1650 2150 1650
 $EndSCHEMATC
